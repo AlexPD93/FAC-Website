@@ -1,28 +1,29 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f2f2f2;
 }
 
 .header-container {
-  height: 60px;
+  height: 70px;
   width: 100%;
-  margin-top: 20px;
   justify-content: space-around;
   align-items: center;
   display: inline-flex;
   flex-direction: row;
+  background-color: #ffffff;
 }
 
 .reddit-logo {
-  height: 50px;
-  margin-left: 1.5em;
+  height: 60px;
+  margin-left: 1em;
 }
 
 .reddit-word {
   font-family: "vag-rounded-regular", sans-serif;
   font-size: 50px;
   color: #1c1c1c;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .reddit-i {
@@ -33,21 +34,39 @@ body {
   font-family: "vag-rounded-regular", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #1c1c1c;
-  margin-right: 1em;
-  background-color: #d6d6d6;
-  border-radius: 20px;
+  color: #fffdfd;
+  border: 2px black solid;
+  background-color: black;
+  border-radius: 30px;
   padding: 0.4em;
+}
+
+.logo-span {
+  background-color: #e12128;
+}
+
+.apd-logo {
+  margin: 0;
+  display: block;
+  margin: 0 auto;
+  height: 5em;
+  width: em;
+}
+
+.nav-title-div {
+  background-color: #e12128;
 }
 
 h1 {
   font-family: "poppins";
   font-weight: 200;
-  color: #fffdfd;
-  font-size: 25px;
-  text-align: center;
+  color: #ffffff;
   background-color: #e12128;
+  font-size: 40px;
   width: 100%;
+  text-align: center;
+  margin: 0;
+  height: 50px;
 }
 
 .nav-bar-container {
@@ -66,4 +85,24 @@ h1 {
 a {
   text-decoration: none;
   color: black;
+}
+
+.main-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 1em;
+  width: 100%;
+}
+
+.box-items {
+  border: 1px #cccccc solid;
+  width: 5em;
+  max-width: 100%;
+}
+
+.box-item-right {
+  border: 1px #cccccc solid;
+  position: relative;
 }
