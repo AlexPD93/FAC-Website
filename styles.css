@@ -97,22 +97,33 @@ a {
   color: black;
 }
 
+.main-body {
+  width: 80%;
+  margin: 2em auto;
+}
+
 .main-container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 10%;
-  margin-top: 2em;
-  width: 100%;
 }
 
 .box-items {
   border: 1px #cccccc solid;
   background-color: #ffffff;
-  width: 36.5em;
-  height: 38em;
-  padding-top: 4.5em;
+  width: 34em;
+  height: 22em;
+  text-align: center;
   margin-bottom: 1%;
   max-width: 95%;
+}
+
+.box-images {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.my-images {
+  width: 50%;
 }
