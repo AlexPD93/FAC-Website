@@ -84,12 +84,15 @@ h1 {
   justify-content: space-evenly;
   align-items: center;
   display: inline-flex;
+  flex-wrap: wrap;
+  min-width: 30em;
   flex-direction: row;
 }
 
 .nav-bar-items {
   font-family: "poppins";
   font-weight: 700;
+  margin: 0 10px 16px 10px;
 }
 
 a {
@@ -103,27 +106,36 @@ a {
 }
 
 .main-container {
-  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.container-one {
+  width: 70%;
+  background-color: red;
+  margin-right: 40px;
+}
+
+.container-two {
+  background-color: blue;
+  width: 30%;
 }
 
 .box-items {
   border: 1px #cccccc solid;
   background-color: #ffffff;
-  width: 34em;
-  height: 22em;
+  width: 100%;
   text-align: center;
-  margin-bottom: 1%;
-  max-width: 95%;
+  margin-bottom: 20px;
 }
 
 .box-images {
+  width: 70%;
   display: block;
   margin: 0 auto;
-  width: 80%;
+  padding-bottom: 15px;
 }
 
 .my-images {
-  width: 50%;
+  width: 100%;
 }
