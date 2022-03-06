@@ -76,6 +76,7 @@ h1 {
   width: 100%;
   margin: 0;
   height: 50px;
+  padding-top: 1%;
 }
 
 .nav-bar-container {
@@ -100,24 +101,19 @@ a {
   color: black;
 }
 
-.main-body {
+.main-container {
+  display: flex;
+  flex-direction: row;
   width: 80%;
   margin: 2em auto;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: row;
-}
-
 .container-one {
   width: 70%;
-  background-color: red;
   margin-right: 40px;
 }
 
 .container-two {
-  background-color: blue;
   width: 30%;
 }
 
@@ -127,6 +123,11 @@ a {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.about-me {
+  margin-top: 28vh;
 }
 
 .box-images {
@@ -136,6 +137,33 @@ a {
   padding-bottom: 15px;
 }
 
-.my-images {
+.right-box-items {
+  border: 1px #cccccc solid;
+  background-color: #ffffff;
   width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.my-images {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.first-picture {
+  margin-top: 28vh;
+}
+
+@media (max-width: 960px) {
+  .container-two {
+    display: none;
+  }
+  .container-one {
+    width: 100%;
+    margin: 0;
+  }
 }
