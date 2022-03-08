@@ -167,3 +167,9 @@ a {
     margin: 0;
   }
 }
+
+@media (max-width: 735px) {
+  .about-me {
+    margin-top: 35vh;
+  }
+}
