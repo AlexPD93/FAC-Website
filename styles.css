@@ -134,9 +134,19 @@ a {
   background-color: #ffffff;
 }
 
-.like-button-img {
-  display: flex;
-  justify-content: flex-start;
+.like-button:hover {
+  cursor: pointer;
+}
+
+.dislike-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.dislike-button:hover {
+  cursor: pointer;
 }
 
 .box-titles {
@@ -159,21 +169,41 @@ a {
 }
 
 .like-button-img {
-  height: 15px;
+  width: 30px;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.like-button-img:hover {
+  width: 35px;
+  height: 35px;
+  border: 1px #e12128 solid;
+  border-radius: 90px;
+  display: block;
+  margin-left: 10px;
 }
 
 .like-count {
   text-align: left;
   margin-left: 23.5px;
+  margin-top: 5px;
 }
 
 .dislike-button-img {
-  display: flex;
-  justify-content: flex-start;
-  height: 15px;
-  margin-left: 20px;
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.dislike-button-img:hover {
+  width: 35px;
+  height: 35px;
+  border: 1px #648dab solid;
+  border-radius: 90px;
+  display: block;
+  margin-left: 10px;
 }
 
 .right-box-items {
@@ -212,7 +242,7 @@ a {
     margin-top: 35vh;
   }
   .main-container {
-    width: 100%;
+    width: 95%;
   }
   .box-container {
     width: 100%;
