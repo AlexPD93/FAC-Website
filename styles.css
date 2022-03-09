@@ -45,22 +45,10 @@ body {
   background-color: black;
   border-radius: 30px;
   padding: 0.4em;
-}
-
-.logo-span {
-  background-color: #e12128;
-}
-
-.apd-logo {
-  margin: 0;
-  display: block;
-  margin: 0 auto;
-  height: 5em;
-  width: em;
+  cursor: pointer;
 }
 
 .h1-container {
-  padding-top: 4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,5 +159,20 @@ a {
 @media (max-width: 740px) {
   .about-me {
     margin-top: 35vh;
+  }
+  .header-container {
+    justify-content: space-around;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .reddit-name {
+    font-size: 90%;
+  }
+  .reddit-word {
+    font-size: 35px;
+  }
+  .reddit-logo {
+    height: 50px;
   }
 }
