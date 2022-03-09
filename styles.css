@@ -105,24 +105,75 @@ a {
   width: 30%;
 }
 
-.box-items {
+.box-container {
+  width: 100%;
   border: 1px #cccccc solid;
   background-color: #ffffff;
+  width: 95%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me-box-container {
+  margin-top: 30vh;
+}
+
+.box-items {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
-.about-me {
-  margin-top: 28vh;
+.like-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.like-button-img {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.box-titles {
+  margin: 0;
 }
 
 .box-images {
-  width: 70%;
+  width: 100%;
   display: block;
   margin: 0 auto;
   padding-bottom: 15px;
+}
+
+.box-container-one {
+  width: 10%;
+}
+
+.box-container-two {
+  width: 90%;
+}
+
+.like-button-img {
+  height: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.like-count {
+  text-align: left;
+  margin-left: 23.5px;
+}
+
+.dislike-button-img {
+  display: flex;
+  justify-content: flex-start;
+  height: 15px;
+  margin-left: 20px;
 }
 
 .right-box-items {
@@ -143,7 +194,7 @@ a {
 }
 
 .first-picture {
-  margin-top: 28vh;
+  margin-top: 30vh;
 }
 
 @media (max-width: 960px) {
@@ -157,8 +208,14 @@ a {
 }
 
 @media (max-width: 740px) {
-  .about-me {
+  .about-me-box-container {
     margin-top: 35vh;
+  }
+  .main-container {
+    width: 100%;
+  }
+  .box-container {
+    width: 100%;
   }
   .header-container {
     justify-content: space-around;
