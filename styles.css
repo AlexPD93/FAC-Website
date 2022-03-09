@@ -4,6 +4,8 @@ body {
   background-color: #f2f2f2;
 }
 
+/* Header */
+
 .fixed {
   position: fixed;
   top: 0;
@@ -89,6 +91,7 @@ a {
   color: black;
 }
 
+/* Main*/
 .main-container {
   display: flex;
   flex-direction: row;
@@ -127,6 +130,25 @@ a {
   border-radius: 4px;
 }
 
+.box-titles {
+  margin: 0;
+}
+
+.box-images {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.box-container-one {
+  width: 10%;
+}
+
+.box-container-two {
+  width: 90%;
+}
+
 .like-button {
   margin: 0;
   padding: 0;
@@ -147,25 +169,6 @@ a {
 
 .dislike-button:hover {
   cursor: pointer;
-}
-
-.box-titles {
-  margin: 0;
-}
-
-.box-images {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 15px;
-}
-
-.box-container-one {
-  width: 10%;
-}
-
-.box-container-two {
-  width: 90%;
 }
 
 .like-button-img {
