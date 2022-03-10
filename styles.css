@@ -54,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 60px;
 }
 
 h1 {
@@ -119,15 +120,18 @@ a {
   flex-direction: row;
 }
 
-.about-me-box-container {
-  margin-top: 30vh;
-}
-
 .box-items {
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
   border-radius: 4px;
+}
+
+.box-items:target::before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin: -60px 0 0;
 }
 
 .link {
@@ -259,9 +263,6 @@ a {
 }
 
 @media (max-width: 740px) {
-  .about-me-box-container {
-    margin-top: 35vh;
-  }
   .main-container {
     width: 95%;
   }
