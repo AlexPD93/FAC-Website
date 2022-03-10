@@ -4,8 +4,7 @@ let likeCount = document.getElementById("likeCount");
 let likeButton = document.getElementById("likeImageButton");
 let dislikeButton = document.getElementById("dislikeImageButton");
 
-function like(event) {
-  console.log(event);
+function like() {
   count += 1;
   likeCount.innerHTML = `${count}`;
 }

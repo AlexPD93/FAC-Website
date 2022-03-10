@@ -125,17 +125,23 @@ a {
 
 .box-items {
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
+.when-posted {
+  font-size: 12px;
+}
+
 .box-titles {
-  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  font-weight: 530;
 }
 
 .box-images {
-  width: 100%;
+  width: 99%;
   display: block;
   margin: 0 auto;
   padding-bottom: 15px;
@@ -195,7 +201,6 @@ a {
 
 .dislike-button-img {
   width: 30px;
-  margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 0;
 }
@@ -230,6 +235,7 @@ a {
   margin-top: 30vh;
 }
 
+/*Media Queries*/
 @media (max-width: 960px) {
   .container-two {
     display: none;
