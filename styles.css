@@ -131,7 +131,7 @@ a {
   content: "";
   display: block;
   height: 60px;
-  margin: -60px 0 0;
+  margin: -60px 0 0 0;
 }
 
 .link {
@@ -152,7 +152,7 @@ a {
 .box-titles {
   margin-bottom: 10px;
   margin-top: 25px;
-  font-weight: 530;
+  font-weight: 600;
 }
 
 .box-images {
