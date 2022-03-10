@@ -130,6 +130,17 @@ a {
   border-radius: 4px;
 }
 
+.link {
+  text-decoration: none;
+  color: #e54046;
+  font-size: 13px;
+  text-align: left;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 .when-posted {
   font-size: 12px;
 }
@@ -145,6 +156,7 @@ a {
   display: block;
   margin: 0 auto;
   padding-bottom: 15px;
+  margin-top: 1em;
 }
 
 .box-container-one {
