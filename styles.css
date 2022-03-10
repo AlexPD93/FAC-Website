@@ -247,10 +247,6 @@ a {
   margin-bottom: 20px;
 }
 
-.first-picture {
-  margin-top: 30vh;
-}
-
 /*Media Queries*/
 @media (max-width: 960px) {
   .container-two {
