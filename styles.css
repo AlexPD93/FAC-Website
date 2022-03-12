@@ -247,6 +247,12 @@ a {
   margin-bottom: 20px;
 }
 
+.photo-descriptions {
+  text-align: justify;
+  text-align: center;
+  font-size: 13px;
+}
+
 /*Media Queries*/
 @media (max-width: 960px) {
   .container-two {
