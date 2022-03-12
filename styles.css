@@ -314,6 +314,13 @@ a {
     width: 100%;
     margin: 0;
   }
+  .header-container-one {
+    width: 100%;
+  }
+  .header-container-two,
+  .header-container-three {
+    display: none;
+  }
 }
 
 @media (max-width: 740px) {
