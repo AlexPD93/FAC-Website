@@ -1,3 +1,5 @@
+//Like count
+
 let aboutMeCount = 0;
 let fccCount = 0;
 let tributePageCount = 0;
@@ -109,3 +111,36 @@ function featureDislike() {
   featureCount -= 1;
   featureLikeCount.innerHTML = `${featureCount}`;
 }
+
+//Weather feature
+let temperature = document.getElementById("temperature");
+let weatherDescription = document.getElementById("weather-description");
+let iconElement = document.getElementById("weather-icon");
+
+function displayCelciusTemp(response) {
+  let temp = Math.round(response.data.main.temp);
+  let description = response.data.weather[0].description;
+  let descriptionUpper =
+    description.charAt(0).toUpperCase() + description.slice(1);
+  console.log(descriptionUpper);
+  temperature.innerHTML = `${temp}°C`;
+  weatherDescription.innerHTML = `${descriptionUpper}`;
+  iconElement.setAttribute(
+    `src`,
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+
+function showPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
+  let apiKey = `d3da927bc59cf1a6983a5b442fc7678e`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayCelciusTemp);
+}
+
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+getCurrentLocation();

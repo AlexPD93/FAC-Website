@@ -14,11 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Application Website</title>
   </head>
   <body>
     <div class="fixed">
       <header class="header-container">
+      <div class="header-container-one">
         <a id="reddit-link" href="https://www.reddit.com/">
           <img
             src="Images/Reddit-logo.png"
@@ -30,10 +32,19 @@
         <a href="https://alexpd93.github.io/FAC-Website/">
           <button id="homepage" class="reddit-name">a/AlexPerezDavies</button>
         </a>
-      </header>
+        </div>
+        <div class="header-container-two">
+        <img id="weather-icon" class="weather-image" src="" alt="Weather icon">
+        </div>
+        <div class="header-container-three">
+        <p id="temperature" class="temperature"></p>
+        <p id="weather-description" class="weather-description"></p>
+        </div>
+        </header>
+      </div>
     </div>
       <div class="h1-container">
-        <h1>Alex Perez-Davies on Applyit</h1>
+        <h1>Alex Perez-Davies on applyit</h1>
       </div>
       <nav class="nav-bar-container">
         <p class="nav-bar-items"><a href="#about-me">About Me</a></p>

@@ -13,13 +13,30 @@ body {
 }
 
 .header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-container-one {
   height: 70px;
-  width: 100%;
-  justify-content: space-around;
+  width: 90%;
+  justify-content: space-evenly;
   align-items: center;
   display: inline-flex;
   flex-direction: row;
   background-color: #ffffff;
+}
+
+.header-container-two {
+  background-color: #ffffff;
+  width: 5%;
+  height: 70px;
+}
+
+.header-container-three {
+  background-color: #ffffff;
+  width: 5%;
+  height: 70px;
 }
 
 .reddit-logo {
@@ -50,6 +67,24 @@ body {
   cursor: pointer;
 }
 
+.weather-image {
+  width: 80%;
+  margin-top: 0.5em;
+}
+
+.temperature {
+  margin: 0;
+  font-size: 12.5px;
+  margin-top: 1em;
+}
+
+.weather-description {
+  font-size: 12.5px;
+  margin: 0;
+}
+
+/*h1*/
+
 .h1-container {
   display: flex;
   align-items: center;
@@ -69,6 +104,8 @@ h1 {
   height: 50px;
   padding-top: 1%;
 }
+
+/*Nav bar*/
 
 .nav-bar-container {
   width: 100%;
@@ -93,6 +130,7 @@ a {
 }
 
 /* Main*/
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -253,6 +291,8 @@ a {
   font-size: 13px;
 }
 
+/*Footer*/
+
 .footer {
   text-align: center;
   background-color: #e12128;
@@ -260,7 +300,7 @@ a {
   position: relative;
 }
 
-.footer-link.footer-link:hover {
+.footer-link.footer-linkhover:hover {
   color: #ffffff;
   text-decoration: underline;
 }
@@ -283,7 +323,7 @@ a {
   .box-container {
     width: 100%;
   }
-  .header-container {
+  .header-container-one {
     justify-content: space-around;
     align-items: center;
     display: inline-flex;
