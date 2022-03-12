@@ -253,6 +253,18 @@ a {
   font-size: 13px;
 }
 
+.footer {
+  text-align: center;
+  background-color: #e12128;
+  font-size: 18px;
+  position: relative;
+}
+
+.footer-link.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /*Media Queries*/
 @media (max-width: 960px) {
   .container-two {
