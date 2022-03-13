@@ -300,7 +300,7 @@ a {
   position: relative;
 }
 
-.footer-link.footer-linkhover:hover {
+.footer.footer-link:hover {
   color: #ffffff;
   text-decoration: underline;
 }
