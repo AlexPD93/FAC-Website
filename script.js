@@ -122,7 +122,6 @@ function displayCelciusTemp(response) {
   let description = response.data.weather[0].description;
   let descriptionUpper =
     description.charAt(0).toUpperCase() + description.slice(1);
-  console.log(descriptionUpper);
   temperature.innerHTML = `${temp}°C`;
   weatherDescription.innerHTML = `${descriptionUpper}`;
   iconElement.setAttribute(
@@ -144,3 +143,43 @@ function getCurrentLocation() {
 }
 
 getCurrentLocation();
+
+// Comment box
+
+/*let commentText, wrapDiv;
+    const textBox = document.createElement('div');
+    const replyButton = document.createElement('button');
+    replyButton.className = 'reply';
+    replyButton.innerHTML = 'Reply';
+    const wrapDiv = document.createElement('div');
+    wrapDiv.className = 'wrapper';
+    wrapDiv.style.marginLeft = 0;
+    commentText = document.getElementById('newComment').value;
+    document.getElementById('newComment').value = '';
+    textBox.innerHTML = commentText;
+    wrapDiv.append(textBox, replyButton, likeButton, deleteButton);
+    commentContainer.appendChild(wrapDiv);*/
+
+function addComment() {
+  document.getElementById("commentButton").style.display = "none";
+
+  const commentBox = document.createElement("textarea");
+  commentBox.id = "commentBox";
+  commentBox.style.display = "flex";
+  commentBox.placeholder = "What are your thoughts?";
+  commentBox.innerHTML = "";
+  document.getElementById("comments").appendChild(commentBox);
+
+  const submitComment = document.createElement("button");
+  submitComment.id = "submitCommentTwo";
+  submitComment.style.marginTop = "1em";
+  submitComment.innerHTML = "Comment";
+  document.getElementById("comments").appendChild(submitComment);
+
+  submitComment.onclick = function submitComment() {
+    let comment = commentBox.value;
+    const newComments = document.createElement("p");
+    document.getElementById("comments").appendChild(newComments);
+    newComments.innerHTML = `${comment}`;
+  };
+}
