@@ -146,34 +146,66 @@ getCurrentLocation();
 
 // Comment box
 
-function addComment() {
-  let commentButton = document.getElementById("commentButton");
-  commentButton.style.display = "none";
-  let commentIcon = document.getElementById("commentIcon");
-  commentIcon.style.display = "none";
-
-  let commentContainer = document.getElementById("comments");
+function addComment(element) {
+  console.log(element);
+  let boxContainer = element.parentNode.parentNode.parentNode;
+  let commentContainer = element.parentNode;
   commentContainer.classList.add("comment-container-after-click");
 
   const commentBox = document.createElement("textarea");
-  commentBox.id = "commentBox";
   commentBox.classList.add("comment-box-after-click");
   commentBox.placeholder = "What are your thoughts?";
   commentBox.innerHTML = "";
   commentContainer.append(commentBox);
 
   const submitComment = document.createElement("button");
-  submitComment.id = "submitCommentTwo";
   submitComment.classList.add("submit-comment-after-click");
   submitComment.innerHTML = "Comment";
   commentContainer.append(submitComment);
 
   submitComment.onclick = function submitComment() {
     let comment = commentBox.value;
-    let container = document.getElementById("boxContainerTwo");
     const newComments = document.createElement("p");
-    container.appendChild(newComments);
+    boxContainer.appendChild(newComments);
     newComments.innerHTML = `${comment}`;
     commentBox.value = "";
   };
+}
+
+function comment(event) {
+  let parentContainer = event.target;
+  let commentButton = event.target;
+  commentButton.style.display = "none";
+  let commentIcon = document.getElementsByClassName("comment-icon");
+  let iconArray = Array.from(commentIcon);
+
+  if (iconArray[0].nextElementSibling.style.display === "none") {
+    iconArray[0].style.display = "none";
+    addComment(parentContainer);
+  }
+  if (iconArray[1].nextElementSibling.style.display === "none") {
+    iconArray[1].style.display = "none";
+    addComment(parentContainer);
+  }
+  if (iconArray[2].nextElementSibling.style.display === "none") {
+    iconArray[2].style.display = "none";
+  }
+  if (iconArray[3].nextElementSibling.style.display === "none") {
+    iconArray[3].style.display = "none";
+  }
+  if (iconArray[4].nextElementSibling.style.display === "none") {
+    iconArray[4].style.display = "none";
+  }
+  if (iconArray[5].nextElementSibling.style.display === "none") {
+    iconArray[5].style.display = "none";
+  }
+  if (iconArray[6].nextElementSibling.style.display === "none") {
+    iconArray[6].style.display = "none";
+  }
+  if (iconArray[7].nextElementSibling.style.display === "none") {
+    iconArray[7].style.display = "none";
+  }
+  if (iconArray[8].nextElementSibling.style.display === "none") {
+    iconArray[8].style.display = "none";
+  }
 }
