@@ -146,40 +146,34 @@ getCurrentLocation();
 
 // Comment box
 
-/*let commentText, wrapDiv;
-    const textBox = document.createElement('div');
-    const replyButton = document.createElement('button');
-    replyButton.className = 'reply';
-    replyButton.innerHTML = 'Reply';
-    const wrapDiv = document.createElement('div');
-    wrapDiv.className = 'wrapper';
-    wrapDiv.style.marginLeft = 0;
-    commentText = document.getElementById('newComment').value;
-    document.getElementById('newComment').value = '';
-    textBox.innerHTML = commentText;
-    wrapDiv.append(textBox, replyButton, likeButton, deleteButton);
-    commentContainer.appendChild(wrapDiv);*/
-
 function addComment() {
-  document.getElementById("commentButton").style.display = "none";
+  let commentButton = document.getElementById("commentButton");
+  commentButton.style.display = "none";
+  let commentIcon = document.getElementById("commentIcon");
+  commentIcon.style.display = "none";
+
+  let commentContainer = document.getElementById("comments");
+  commentContainer.classList.add("comment-container-after-click");
 
   const commentBox = document.createElement("textarea");
   commentBox.id = "commentBox";
-  commentBox.style.display = "flex";
+  commentBox.classList.add("comment-box-after-click");
   commentBox.placeholder = "What are your thoughts?";
   commentBox.innerHTML = "";
-  document.getElementById("comments").appendChild(commentBox);
+  commentContainer.append(commentBox);
 
   const submitComment = document.createElement("button");
   submitComment.id = "submitCommentTwo";
-  submitComment.style.marginTop = "1em";
+  submitComment.classList.add("submit-comment-after-click");
   submitComment.innerHTML = "Comment";
-  document.getElementById("comments").appendChild(submitComment);
+  commentContainer.append(submitComment);
 
   submitComment.onclick = function submitComment() {
     let comment = commentBox.value;
+    let container = document.getElementById("boxContainerTwo");
     const newComments = document.createElement("p");
-    document.getElementById("comments").appendChild(newComments);
+    container.appendChild(newComments);
     newComments.innerHTML = `${comment}`;
+    commentBox.value = "";
   };
 }
