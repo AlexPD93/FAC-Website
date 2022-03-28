@@ -147,25 +147,25 @@ getCurrentLocation();
 // Comment box
 
 function addComment(element) {
-  console.log(element);
-  let boxContainer = element.parentNode.parentNode.parentNode;
-  let commentContainer = element.parentNode;
+  const boxContainer = element.parentNode.parentNode.parentNode;
+  const commentContainer = element.parentNode;
   commentContainer.classList.add("comment-container-after-click");
 
   const commentBox = document.createElement("textarea");
   commentBox.classList.add("comment-box-after-click");
   commentBox.placeholder = "What are your thoughts?";
   commentBox.innerHTML = "";
-  commentContainer.append(commentBox);
 
   const submitComment = document.createElement("button");
   submitComment.classList.add("submit-comment-after-click");
   submitComment.innerHTML = "Comment";
-  commentContainer.append(submitComment);
+
+  commentContainer.append(commentBox, submitComment);
 
   submitComment.onclick = function submitComment() {
     let comment = commentBox.value;
     const newComments = document.createElement("p");
+    newComments.classList.add("comment-boxes");
     boxContainer.appendChild(newComments);
     newComments.innerHTML = `${comment}`;
     commentBox.value = "";
@@ -173,39 +173,16 @@ function addComment(element) {
 }
 
 function comment(event) {
-  let parentContainer = event.target;
-  let commentButton = event.target;
+  const commentButton = event.target;
   commentButton.style.display = "none";
-  let commentIcon = document.getElementsByClassName("comment-icon");
-  let iconArray = Array.from(commentIcon);
+  const commentIcon = document.getElementsByClassName("comment-icon");
 
-  if (iconArray[0].nextElementSibling.style.display === "none") {
-    iconArray[0].style.display = "none";
-    addComment(parentContainer);
-  }
-  if (iconArray[1].nextElementSibling.style.display === "none") {
-    iconArray[1].style.display = "none";
-    addComment(parentContainer);
-  }
-  if (iconArray[2].nextElementSibling.style.display === "none") {
-    iconArray[2].style.display = "none";
-  }
-  if (iconArray[3].nextElementSibling.style.display === "none") {
-    iconArray[3].style.display = "none";
-  }
-  if (iconArray[4].nextElementSibling.style.display === "none") {
-    iconArray[4].style.display = "none";
-  }
-  if (iconArray[5].nextElementSibling.style.display === "none") {
-    iconArray[5].style.display = "none";
-  }
-  if (iconArray[6].nextElementSibling.style.display === "none") {
-    iconArray[6].style.display = "none";
-  }
-  if (iconArray[7].nextElementSibling.style.display === "none") {
-    iconArray[7].style.display = "none";
-  }
-  if (iconArray[8].nextElementSibling.style.display === "none") {
-    iconArray[8].style.display = "none";
-  }
+  const iconArray = Array.from(commentIcon);
+  iconArray.forEach((icon) => {
+    if (icon.nextElementSibling.style.display === "none") {
+      icon.style.display = "none";
+    }
+  });
+
+  addComment(commentButton);
 }
