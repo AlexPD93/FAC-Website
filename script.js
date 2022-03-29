@@ -167,7 +167,7 @@ function addComment(element) {
     const newComments = document.createElement("p");
     newComments.classList.add("comment-boxes");
     boxContainer.appendChild(newComments);
-    newComments.innerHTML = `${comment}`;
+    newComments.innerHTML = `You said: ${comment}`;
     commentBox.value = "";
   };
 }
@@ -181,7 +181,6 @@ function comment(event) {
     const iconArray = Array.from(commentIcon);
     iconArray.forEach((icon) => {
       if (icon.nextElementSibling.style.display === "none") {
-        console.log(icon);
         icon.style.display = "none";
       }
     });
