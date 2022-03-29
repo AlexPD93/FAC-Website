@@ -327,12 +327,14 @@ a {
   align-self: flex-end;
 }
 
+.comment-box-container {
+  font-size: 12px;
+}
+
 .comment-boxes {
   width: 50%;
-  margin-bottom: 10px;
-  text-align: center;
-  border: 0.5px solid black;
-  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .right-box-items {

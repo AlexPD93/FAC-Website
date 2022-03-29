@@ -135,7 +135,10 @@ function showPosition(position) {
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
   let apiKey = `d3da927bc59cf1a6983a5b442fc7678e`;
+  let timeApiKey = `LOVZZS8UH5RS`;
+  let timeURL = `http://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayCelciusTemp);
+  axios.get(`${timeURL}`).then(showLiveTime);
 }
 
 function getCurrentLocation() {
@@ -145,6 +148,10 @@ function getCurrentLocation() {
 getCurrentLocation();
 
 // Comment box
+
+let time;
+let zoneName;
+let userName;
 
 function addComment(element) {
   const boxContainer = element.parentNode.parentNode.parentNode;
@@ -162,12 +169,16 @@ function addComment(element) {
 
   commentContainer.append(commentBox, submitComment);
 
-  submitComment.onclick = function submitComment() {
+  submitComment.onclick = function postComment() {
     let comment = commentBox.value;
+    const commentBoxContainer = document.createElement("div");
+    commentBoxContainer.classList.add("comment-box-container");
     const newComments = document.createElement("p");
     newComments.classList.add("comment-boxes");
+    boxContainer.appendChild(commentBoxContainer);
     boxContainer.appendChild(newComments);
-    newComments.innerHTML = `You said: ${comment}`;
+    commentBoxContainer.innerHTML = `${userName}: @${time} ${zoneName} `;
+    newComments.innerHTML = `${comment}`;
     commentBox.value = "";
   };
 }
@@ -214,3 +225,15 @@ function comment(event) {
     addComment(icon);
   }
 }
+
+function showLiveTime(response) {
+  time = response.data.formatted.slice(10, 16);
+  zoneName = response.data.zoneName;
+}
+
+function user() {
+  userName = prompt("What username would you like?");
+  alert(`Welcome to applyit ${userName}`);
+}
+
+user();
