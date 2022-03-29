@@ -173,16 +173,45 @@ function addComment(element) {
 }
 
 function comment(event) {
-  const commentButton = event.target;
-  commentButton.style.display = "none";
-  const commentIcon = document.getElementsByClassName("comment-icon");
+  if (event.target.classList.value === "comment-button") {
+    const commentButton = event.target;
+    commentButton.style.display = "none";
 
-  const iconArray = Array.from(commentIcon);
-  iconArray.forEach((icon) => {
-    if (icon.nextElementSibling.style.display === "none") {
-      icon.style.display = "none";
+    const commentIcon = document.getElementsByClassName("comment-icon");
+    const iconArray = Array.from(commentIcon);
+    iconArray.forEach((icon) => {
+      if (icon.nextElementSibling.style.display === "none") {
+        console.log(icon);
+        icon.style.display = "none";
+      }
+    });
+    addComment(commentButton);
+  }
+  if (event.target.classList.value === "comment-icon") {
+    const icon = event.target;
+    icon.style.display = "none";
+
+    const button = document.getElementsByClassName("comment-button");
+    const buttonArray = Array.from(button);
+    if (event.target.parentNode.parentNode.id === "aboutMe") {
+      buttonArray[0].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "freeCodeCamp") {
+      buttonArray[1].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "tributePage") {
+      buttonArray[2].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "functionsPartOne") {
+      buttonArray[3].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "functionsPartTwo") {
+      buttonArray[4].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "dom") {
+      buttonArray[5].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "arrays") {
+      buttonArray[6].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "objects") {
+      buttonArray[7].style.display = "none";
+    } else if (event.target.parentNode.parentNode.id === "feature") {
+      buttonArray[8].style.display = "none";
     }
-  });
-
-  addComment(commentButton);
+    addComment(icon);
+  }
 }
