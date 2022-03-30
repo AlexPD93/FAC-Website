@@ -169,7 +169,6 @@ function addComment(element) {
   commentContainer.append(commentBox, submitComment);
 
   submitComment.onclick = function postComment() {
-    console.log(time);
     let comment = commentBox.value;
     const commentBoxContainer = document.createElement("div");
     commentBoxContainer.classList.add("comment-box-container");
@@ -229,4 +228,5 @@ function comment(event) {
 function showLiveTime(response) {
   time = response.data.formatted.slice(10, 16);
   zoneName = response.data.zoneName;
+  console.log(time);
 }
