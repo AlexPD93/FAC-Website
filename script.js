@@ -126,7 +126,7 @@ function displayCelciusTemp(response) {
   weatherDescription.innerHTML = `${descriptionUpper}`;
   iconElement.setAttribute(
     `src`,
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
@@ -135,8 +135,8 @@ function showPosition(position) {
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
   let apiKey = `d3da927bc59cf1a6983a5b442fc7678e`;
-  let timeApiKey = `LOVZZS8UH5RS`;
-  let timeURL = `https://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
+  let timeApiKey = `1da0e66d8c6e4cb08f8b2086326b20b6`;
+  let timeURL = `https://api.ipgeolocation.io/timezone?apiKey=${timeApiKey}&lat=${latitude}&long=${longitude}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayCelciusTemp);
   axios.get(`${timeURL}`).then(showLiveTime);
 }
@@ -226,7 +226,6 @@ function comment(event) {
 }
 
 function showLiveTime(response) {
-  time = response.data.formatted.slice(10, 16);
-  zoneName = response.data.zoneName;
-  console.log(time);
+  time = response.data.date_time.slice(10, 16);
+  zoneName = response.data.timezone;
 }
