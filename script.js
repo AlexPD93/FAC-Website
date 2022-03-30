@@ -136,7 +136,7 @@ function showPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
   let apiKey = `d3da927bc59cf1a6983a5b442fc7678e`;
   let timeApiKey = `LOVZZS8UH5RS`;
-  let timeURL = `http://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
+  let timeURL = `https://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayCelciusTemp);
   axios.get(`${timeURL}`).then(showLiveTime);
 }
