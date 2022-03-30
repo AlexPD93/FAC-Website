@@ -151,7 +151,6 @@ getCurrentLocation();
 
 let time;
 let zoneName;
-let userName;
 
 function addComment(element) {
   const boxContainer = element.parentNode.parentNode.parentNode;
@@ -170,6 +169,7 @@ function addComment(element) {
   commentContainer.append(commentBox, submitComment);
 
   submitComment.onclick = function postComment() {
+    console.log(time);
     let comment = commentBox.value;
     const commentBoxContainer = document.createElement("div");
     commentBoxContainer.classList.add("comment-box-container");
@@ -177,7 +177,7 @@ function addComment(element) {
     newComments.classList.add("comment-boxes");
     boxContainer.appendChild(commentBoxContainer);
     boxContainer.appendChild(newComments);
-    commentBoxContainer.innerHTML = `${userName}: @${time} ${zoneName} `;
+    commentBoxContainer.innerHTML = `You posted: @${time} ${zoneName} `;
     newComments.innerHTML = `${comment}`;
     commentBox.value = "";
   };
@@ -230,10 +230,3 @@ function showLiveTime(response) {
   time = response.data.formatted.slice(10, 16);
   zoneName = response.data.zoneName;
 }
-
-function user() {
-  userName = prompt("What username would you like?");
-  alert(`Welcome to applyit ${userName}`);
-}
-
-user();
