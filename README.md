@@ -1,7 +1,14 @@
-My website link is: https://alexpd93.github.io/FAC-Website/
+# Alex Perez-Davies Founder's and Coder's Application Website
 
-My application for the Founders and Coders skills bootcamp is inspired by the [Arsenal](https://www.reddit.com/r/Gunners/) reddit page, which I visit a lot. 
+## Website link
+https://alexpd93.github.io/FAC-Website/
 
-My features are a Stopwatch and a little weather widget in the top right corner. 
+## Inspiration
+The [Arsenal](https://www.reddit.com/r/Gunners/) reddit page, which I visit a lot. 
 
-# Hello
+##Features
+- Stopwatch 
+- Weather widget
+
+
+
